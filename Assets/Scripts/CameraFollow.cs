@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Camera.position = Player.position + new Vector3(0,2,-FollowDistance);
+        Camera.position = Player.position + new Vector3(0,FollowDistance,0);
         Camera.LookAt(Player);
     }
 }
