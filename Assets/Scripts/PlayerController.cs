@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _inputMovement;
     private RaycastHit _hit;
     private bool _inAir = false;
-    private float _maxSteeringAngle = 21f;
+    private float _maxSteeringAngle = 35f;
     private float _currentAngle = 0f;
     private float _angleProgress = 0;
     
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
                     direction = -_maxSteeringAngle;
                 }
 
-                _currentAngle = Mathf.Lerp(0, direction, _angleProgress += Time.deltaTime * 0.005f);
+                _currentAngle = Mathf.Lerp(0, direction, _angleProgress += Time.deltaTime * 0.05f);
                 CarModel.Rotate(Vector3.up,_currentAngle);
             }
             else
